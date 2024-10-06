@@ -60,8 +60,8 @@ export default function ProfileCard({ name, sub, dt1 }) {
     if (file) {
       const data = new FormData();
       data.append("file", file);
-      data.append("upload_preset", `${REACT_APP_PRESET_NAME}`);
-      data.append("cloud_name", `${REACT_APP_CLOUD_NAME}`);
+      data.append("upload_preset", `${process.env.REACT_APP_PRESET_NAME}`);
+      data.append("cloud_name", `${process.env.REACT_APP_CLOUD_NAME}`);
   
       fetch(`https://api.cloudinary.com/v1_1/diex70uhw/image/upload`, {
         method: "POST",
