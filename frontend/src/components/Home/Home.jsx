@@ -24,7 +24,7 @@ export default function Home() {
     fetchPosts();
   }, []);
   return (
-    <Grid container sx={{backgroundColor:"black",height:'100vh',padding:"2%"}}>
+    <Grid container sx={{backgroundColor:"black",height:'max-content',padding:"2%"}}>
       <Grid item xs={12}>
         <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
           {posts.map((value) => (
