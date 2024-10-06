@@ -32,7 +32,7 @@ const Signin = () => {
   const login = async (e) => {
     e.preventDefault();
     const { email, password } = userDetails;
-    const res = await fetch("http://localhost:5000/api/user/login", {
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

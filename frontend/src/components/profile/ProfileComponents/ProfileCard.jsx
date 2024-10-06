@@ -60,8 +60,8 @@ export default function ProfileCard({ name, sub, dt1 }) {
     if (file) {
       const data = new FormData();
       data.append("file", file);
-      data.append("upload_preset", "chikan");
-      data.append("cloud_name", "diex70uhw");
+      data.append("upload_preset", `${REACT_APP_PRESET_NAME}`);
+      data.append("cloud_name", `${REACT_APP_CLOUD_NAME}`);
   
       fetch(`https://api.cloudinary.com/v1_1/diex70uhw/image/upload`, {
         method: "POST",
@@ -79,7 +79,7 @@ export default function ProfileCard({ name, sub, dt1 }) {
             body: JSON.stringify({ imageUrl: data.url, caption }),
           };
   
-          fetch("http://localhost:5000/api/user/upload", options).then((res) => {
+          fetch(`${process.env.REACT_APP_SERVER_URL}/upload`, options).then((res) => {
           });
   
           setFile(null);

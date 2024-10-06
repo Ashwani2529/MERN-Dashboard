@@ -7,7 +7,7 @@ export default function Posts() {
   //fetch posts from API
   const [posts, setPosts] = React.useState([]);
   const fetchPosts = async () => {  
-    const res = await fetch("http://localhost:5000/api/user/posts", {
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/posts`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

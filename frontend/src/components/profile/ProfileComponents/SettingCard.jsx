@@ -88,7 +88,7 @@ export default function SettingsCard(props) {
   // UPDATE USER DATA
   const updateUser = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:5000/api/user/update", {
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

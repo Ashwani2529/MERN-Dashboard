@@ -22,7 +22,7 @@ export default function App() {
     posts:0
   });
   const fetchProfile = async () => {
-    const res = await fetch("http://localhost:5000/api/user/profile", {
+    const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/profile`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

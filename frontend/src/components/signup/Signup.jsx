@@ -36,7 +36,7 @@ export default function Signup() {
     const signup = async (e) => {
         e.preventDefault();
         const { firstName, lastName,gender,dob,phone,address,email,password } = userDetails;
-        const res = await fetch(`http://localhost:5000/api/user/register`, {
+        const res = await fetch(`${process.env.REACT_APP_SERVER_URL}/register`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
