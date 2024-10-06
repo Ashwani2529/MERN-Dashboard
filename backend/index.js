@@ -5,7 +5,7 @@ const app = express();
 const port = 5000;
 app.use(cors(
   {
-    origin: "https://mern-dashboard-posts.netlify.app",
+    origin: "https://mern-dashboard-mu.vercel.app",
     credentials: true
   }
 ));
